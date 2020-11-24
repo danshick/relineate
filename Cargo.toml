@@ -1,5 +1,5 @@
 [package]
-name = "rm2svg"
+name = "relineate"
 version = "0.1.0"
 authors = ["Dan Shick <dan.shick@gmail.com>"]
 edition = "2018"

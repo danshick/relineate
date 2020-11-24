@@ -257,7 +257,6 @@ fn render_svg(layers: Vec<Layer>) -> Result<SVGDocument, String>{
                 if index == 0 { return acc_data.move_to((next_point.x, next_point.y)); }
                 return acc_data.line_to((next_point.x, next_point.y));
               })
-              .close()
             )
           );
         })
