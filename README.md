@@ -27,3 +27,16 @@ OPTIONS:
     -i, --input <INPUT>      Specifies an .rm v5 input file
     -o, --output <OUTPUT>    Specifies an SVG output file
 ```
+
+## Todo
+
+- [ ] Render different _______ differently
+  - [ ] Brushes/Pens/Tools
+  - [ ] Colors
+  - [ ] Line widths
+  - [ ] Stroke speeds/pressures/angles
+- [ ] Modularize and tidy up the code
+- [ ] Add template support
+- [ ] Create scripts (or TUI app?) for convenient document retrieval
+- [ ] Build for ARM for use on-device (with a GUI?)
+- [ ] Support v3 .rm documents (maybe???)
