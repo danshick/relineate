@@ -110,10 +110,10 @@ struct Layer {
 }
 
 fn main() -> Result<(), String> {
-  let opts = App::new("rm2svg")
+  let opts = App::new("relineate")
     .version("0.1.0")
     .author("Dan Shick <dan.shick@gmail.com>")
-    .about("Covert .rm v5 files to SVG")
+    .about("Render .rm v5 files as SVGs")
     .arg(Arg::new("input")
       .short('i')
       .long("input")
@@ -147,7 +147,10 @@ fn main() -> Result<(), String> {
       return render_svg(layers);
     })
     .and_then(|svg| {
-      svg::save("image.svg", &svg).unwrap();
+      svg::save(
+        opts.value_of("output")
+          .map_or_else(|| "image.svg", |o| o),
+        &svg).unwrap();
       return Ok(());
     });
 
